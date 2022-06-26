@@ -880,6 +880,9 @@ namespace Autohand {
         }
 
         public virtual void SetPosition(Vector3 position, Quaternion rotation) {
+            
+            if (body == null) return;
+            
             Vector3 deltaPos = position - transform.position;
             transform.position += deltaPos;
             //This code will move the tracking objects to match the body collider position when moving

@@ -17,6 +17,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private VrPlayerController vrPlayerController;
         [SerializeField] private SceneLoaderController sceneLoaderController;
         [SerializeField] private BundleLoaderController bundleLoaderController;
+        [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
 
         //Services
 
@@ -35,6 +36,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(vrPlayerController);
             Controllers.Add(sceneLoaderController);
             Controllers.Add(bundleLoaderController);
+            Controllers.Add(realtimeMultiplayerController);
         }
 
         protected override void StartScenario()
@@ -109,7 +111,8 @@ namespace Main.Scripts.ApplicationCore.Clients
 
         private void OnFirstSceneLoaded()
         {
-            
+            _onFirstSceneLoad -= OnFirstSceneLoaded;
+            InitializeMultiplayerController();
         }
 
         private void SceneIsLoaded(string room)
@@ -118,6 +121,19 @@ namespace Main.Scripts.ApplicationCore.Clients
 
             // realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
             // realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _loginResponseData);
+        }
+        
+        private void InitializeMultiplayerController()
+        {
+           
+            realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
+            realtimeMultiplayerController.Init("TestRoom", _playerRoot, _handRoots);
+        }
+        
+        private void RealtimeMultiplayerControllerReady()
+        {
+            realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
+          
         }
     }
 }
