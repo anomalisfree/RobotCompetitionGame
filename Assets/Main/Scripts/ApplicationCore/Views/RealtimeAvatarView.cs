@@ -12,6 +12,7 @@ namespace Main.Scripts.ApplicationCore.Views
         [SerializeField] private List<GameObject> localHideObjects;
         [SerializeField] private Transform leftHandRoot;
         [SerializeField] private Transform rightHandRoot;
+        [SerializeField] private Transform bottomRoot;
 
         private RealtimeMultiplayerController _realtimeMultiplayerController;
         private bool _avatarLoaded;
@@ -21,7 +22,7 @@ namespace Main.Scripts.ApplicationCore.Views
             if (realtimeView.isOwnedLocallySelf)
             {
                 _realtimeMultiplayerController = ClientBase.Instance.GetController<RealtimeMultiplayerController>();
-                _realtimeMultiplayerController.SetAvatarHands(transform, (leftHandRoot, rightHandRoot));
+                _realtimeMultiplayerController.SetAvatarHands(transform, (leftHandRoot, rightHandRoot), bottomRoot);
                 
                 foreach (var localHideObject in localHideObjects)
                 {

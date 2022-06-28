@@ -9,14 +9,14 @@ namespace Main.Scripts.ApplicationCore.Controllers
     {
         [SerializeField] private VrPlayerView vrPlayerView;
 
-        public Action<Transform, (Transform leftHandRoot, Transform rightHandRoot)> Ready;
+        public Action<Transform, (Transform leftHandRoot, Transform rightHandRoot), Transform> Ready;
 
         private VrPlayerView _vrPlayerView;
 
         public void Init()
         {
             _vrPlayerView = Instantiate(vrPlayerView);
-                Ready?.Invoke(_vrPlayerView.GetBodyRoot(), _vrPlayerView.GetHandRoots());
+                Ready?.Invoke(_vrPlayerView.GetBodyRoot(), _vrPlayerView.GetHandRoots(), _vrPlayerView.GetBottomRoot());
         }
 
         public void ResetPosition()

@@ -24,6 +24,11 @@ namespace Main.Scripts.ApplicationCore.Views
         {
             return bodyRoot;
         }
+        
+        public Transform GetBottomRoot()
+        {
+            return autoHandPlayer.transform;
+        }
 
         public void ResetPose()
         {

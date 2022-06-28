@@ -13,6 +13,8 @@ namespace Main.Scripts.ApplicationCore.Controllers
         private RealtimeMultiplayerView _realtimeMultiplayerView;
         private Transform _vrPlayerRoot;
         private Transform _vrAvatarRoot;
+        private Transform _vrPlayerBottomRoot;
+        private Transform _vrAvatarBottomRoot;
 
         private List<Transform> _handChildrenRight = new List<Transform>();
         private List<Transform> _handChildrenAvatarRight = new List<Transform>();
@@ -22,9 +24,10 @@ namespace Main.Scripts.ApplicationCore.Controllers
         public Action Ready;
 
         public void Init(string roomName, Transform vrPlayerRoot,
-            (Transform leftHandRoot, Transform rightHandRoot) handRoots)
+            (Transform leftHandRoot, Transform rightHandRoot) handRoots, Transform vrPayerBottomRoot)
         {
             _vrPlayerRoot = vrPlayerRoot;
+            _vrPlayerBottomRoot = vrPayerBottomRoot;
 
             if (_realtimeMultiplayerView == null)
             {
@@ -45,6 +48,8 @@ namespace Main.Scripts.ApplicationCore.Controllers
         {
             _vrPlayerRoot = null;
             _vrAvatarRoot = null;
+            _vrPlayerBottomRoot = null;
+            _vrAvatarBottomRoot = null;
 
             _handChildrenRight = new List<Transform>();
             _handChildrenAvatarRight = new List<Transform>();
@@ -61,9 +66,10 @@ namespace Main.Scripts.ApplicationCore.Controllers
         }
 
         public void SetAvatarHands(Transform vrAvatarRoot,
-            (Transform leftHandRoot, Transform rightHandRoot) handRootsAvatar)
+            (Transform leftHandRoot, Transform rightHandRoot) handRootsAvatar, Transform vrAvatarBottomRoot)
         {
             _vrAvatarRoot = vrAvatarRoot;
+            _vrAvatarBottomRoot = vrAvatarBottomRoot;
             var (leftHandRoot, rightHandRoot) = handRootsAvatar;
             _handChildrenAvatarLeft = GetAllChildren(leftHandRoot, _handChildrenAvatarLeft);
             _handChildrenAvatarRight = GetAllChildren(rightHandRoot, _handChildrenAvatarRight);
@@ -101,11 +107,14 @@ namespace Main.Scripts.ApplicationCore.Controllers
 
         private void Update()
         {
-            if (_vrPlayerRoot != null && _vrAvatarRoot != null)
+            if (_vrPlayerRoot != null && _vrAvatarRoot != null && _vrPlayerBottomRoot != null &&
+                _vrAvatarBottomRoot != null)
             {
                 _vrAvatarRoot.position = _vrPlayerRoot.position;
                 _vrAvatarRoot.rotation = _vrPlayerRoot.rotation;
-                _vrAvatarRoot.localScale =  _vrPlayerRoot.localScale;
+                _vrAvatarRoot.localScale = _vrPlayerRoot.localScale;
+                _vrAvatarBottomRoot.position = _vrPlayerBottomRoot.position;
+                _vrAvatarBottomRoot.rotation = _vrPlayerBottomRoot.rotation;
             }
 
             _handChildrenLeft.RemoveAll(item => item == null);
