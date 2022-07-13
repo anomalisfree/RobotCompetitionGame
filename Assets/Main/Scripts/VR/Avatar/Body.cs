@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Main.Scripts.VR.Avatar
@@ -9,9 +10,11 @@ namespace Main.Scripts.VR.Avatar
         [SerializeField] private Transform neck;
         [SerializeField] private Transform hip;
         [SerializeField] private Transform bottom;
+        [SerializeField] private Transform spines;
 
-        private const float NeckVerticalShift = 0.092f;
+        private const float NeckVerticalShift = 0.12f;
         private const float HipVerticalShift = 0.13f;
+        private const float HideBodyDistance = 0.36f;
 
         private void Update()
         {
@@ -20,6 +23,14 @@ namespace Main.Scripts.VR.Avatar
 
             hip.position = bottom.position + Vector3.up * HipVerticalShift;
             hip.localRotation = neck.localRotation;
+
+            spines.transform.LookAt(hip.position);
+            var bodyDistance = Vector3.Distance(spines.position + Vector3.down * 0.025f, hip.position);
+            spines.transform.localScale = new Vector3(2, 2, bodyDistance / 0.2f);
+
+            transform.localScale = Vector3.Distance(head.position, bottom.position) < HideBodyDistance
+                ? Vector3.zero
+                : Vector3.one;
         }
     }
 }

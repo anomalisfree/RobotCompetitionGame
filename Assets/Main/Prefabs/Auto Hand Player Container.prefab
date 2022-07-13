@@ -8641,6 +8641,10 @@ PrefabInstance:
       propertyPath: fingerSmoothSpeed
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3752235605499430622, guid: 386242486c5972145be957989b61c7df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 530ea01557fb5a94dad971632d536bac, type: 2}
     - target: {fileID: 4149695533559809519, guid: 386242486c5972145be957989b61c7df, type: 3}
       propertyPath: guardTime
       value: 0
@@ -9949,6 +9953,10 @@ PrefabInstance:
       propertyPath: fingerSmoothSpeed
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 3752235605499430622, guid: 386242486c5972145be957989b61c7df, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 530ea01557fb5a94dad971632d536bac, type: 2}
     - target: {fileID: 4149695533559809519, guid: 386242486c5972145be957989b61c7df, type: 3}
       propertyPath: guardTime
       value: 0
@@ -10032,6 +10040,10 @@ PrefabInstance:
     - target: {fileID: 8685472768745978638, guid: 386242486c5972145be957989b61c7df, type: 3}
       propertyPath: m_Name
       value: RobotHand (L)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8685472768745978638, guid: 386242486c5972145be957989b61c7df, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8783913793033214316, guid: 386242486c5972145be957989b61c7df, type: 3}
       propertyPath: m_Layer
