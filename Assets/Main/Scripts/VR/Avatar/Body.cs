@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using PathCreation;
 using UnityEngine;
 
 namespace Main.Scripts.VR.Avatar
@@ -11,10 +13,14 @@ namespace Main.Scripts.VR.Avatar
         [SerializeField] private Transform hip;
         [SerializeField] private Transform bottom;
         [SerializeField] private Transform spines;
+        [SerializeField] private PathCreator pathCreator;
+        [SerializeField] private Transform[] leftHandWaypoints;
 
         private const float NeckVerticalShift = 0.12f;
         private const float HipVerticalShift = 0.13f;
         private const float HideBodyDistance = 0.36f;
+
+        private BezierPath _leftHandBezierPath;
 
         private void Update()
         {
@@ -31,6 +37,9 @@ namespace Main.Scripts.VR.Avatar
             transform.localScale = Vector3.Distance(head.position, bottom.position) < HideBodyDistance
                 ? Vector3.zero
                 : Vector3.one;
+            
+            _leftHandBezierPath = new BezierPath (leftHandWaypoints, false, PathSpace.xyz);
+            pathCreator.bezierPath = _leftHandBezierPath;
         }
     }
 }
