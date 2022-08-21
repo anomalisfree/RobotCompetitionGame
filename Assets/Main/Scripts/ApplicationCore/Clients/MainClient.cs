@@ -121,8 +121,8 @@ namespace Main.Scripts.ApplicationCore.Clients
         {
             if (string.IsNullOrEmpty(room)) return;
 
-            // realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            // realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _loginResponseData);
+            realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
+            realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _bottomRoot);
         }
         
         private void InitializeMultiplayerController()

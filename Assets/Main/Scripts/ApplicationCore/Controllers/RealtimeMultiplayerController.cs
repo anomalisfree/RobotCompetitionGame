@@ -115,6 +115,7 @@ namespace Main.Scripts.ApplicationCore.Controllers
                 _vrAvatarRoot.localScale = _vrPlayerRoot.localScale;
                 _vrAvatarBottomRoot.position = _vrPlayerBottomRoot.position;
                 _vrAvatarBottomRoot.rotation = _vrPlayerBottomRoot.rotation;
+                _vrAvatarBottomRoot.localScale = _vrPlayerBottomRoot.localScale;
             }
 
             _handChildrenLeft.RemoveAll(item => item == null);
