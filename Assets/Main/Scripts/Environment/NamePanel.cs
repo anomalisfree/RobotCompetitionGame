@@ -1,3 +1,5 @@
+using Main.Scripts.ApplicationCore.Clients;
+using Main.Scripts.ApplicationCore.Controllers;
 using TMPro;
 using UnityEngine;
 
@@ -27,7 +29,11 @@ namespace Main.Scripts.Environment
 
         public void PressEnterBtn()
         {
-            startDoor.ChangePanel();
+            if (textOnDisplay.text.Length > 0)
+            {
+                ClientBase.Instance.GetController<VrPlayerController>().SetPlayerName(textOnDisplay.text);
+                startDoor.ChangePanel();
+            }
         }
     }
 }

@@ -114,7 +114,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void OnFirstSceneLoaded()
         {
             _onFirstSceneLoad -= OnFirstSceneLoaded;
-            InitializeMultiplayerController();
+            //InitializeMultiplayerController();
         }
 
         private void SceneIsLoaded(string room)

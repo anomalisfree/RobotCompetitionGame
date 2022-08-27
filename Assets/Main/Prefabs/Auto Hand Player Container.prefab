@@ -7417,6 +7417,9 @@ MonoBehaviour:
   rightHand: {fileID: 8808841867583656487}
   bodyRoot: {fileID: 7692724640758763033}
   autoHandPlayer: {fileID: 6476960593132341805}
+  skinnedMeshRenderersWithMainColor:
+  - {fileID: 6832121346204544154}
+  - {fileID: 6832121347383724233}
 --- !u!1 &7692724642130663966
 GameObject:
   m_ObjectHideFlags: 0
@@ -8813,6 +8816,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9153324134324409639, guid: 386242486c5972145be957989b61c7df, type: 3}
   m_PrefabInstance: {fileID: 7692724641135028804}
   m_PrefabAsset: {fileID: 0}
+--- !u!137 &6832121346204544154 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3752235605499430622, guid: 386242486c5972145be957989b61c7df, type: 3}
+  m_PrefabInstance: {fileID: 7692724641135028804}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8808841867583656487 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1224213067510249571, guid: 386242486c5972145be957989b61c7df, type: 3}
@@ -10127,6 +10135,11 @@ MonoBehaviour:
 --- !u!4 &1568712272985774896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9153324134324409639, guid: 386242486c5972145be957989b61c7df, type: 3}
+  m_PrefabInstance: {fileID: 7692724642623409687}
+  m_PrefabAsset: {fileID: 0}
+--- !u!137 &6832121347383724233 stripped
+SkinnedMeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 3752235605499430622, guid: 386242486c5972145be957989b61c7df, type: 3}
   m_PrefabInstance: {fileID: 7692724642623409687}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &8808841866043766388 stripped

@@ -1,5 +1,5 @@
 using System;
-using Main.Scripts.ApplicationCore.Clients;
+using Main.Scripts.ApplicationCore.Data;
 using Main.Scripts.ApplicationCore.Views;
 using UnityEngine;
 
@@ -8,8 +8,10 @@ namespace Main.Scripts.ApplicationCore.Controllers
     public class VrPlayerController : BaseController
     {
         [SerializeField] private VrPlayerView vrPlayerView;
+        [SerializeField] private Material[] mainMaterials;
 
         public Action<Transform, (Transform leftHandRoot, Transform rightHandRoot), Transform> Ready;
+        public PlayerData PlayerData = new PlayerData();
 
         private VrPlayerView _vrPlayerView;
 
@@ -25,6 +27,17 @@ namespace Main.Scripts.ApplicationCore.Controllers
             {
                 _vrPlayerView.ResetPose();
             }
+        }
+
+        public void SetPlayerName(string playerName)
+        {
+            PlayerData.Name = playerName;
+        }
+
+        public void SetPlayerColor(int colorNum)
+        {
+            PlayerData.ColorNum = colorNum;
+            _vrPlayerView.SetMainMaterial(mainMaterials[colorNum]);
         }
     }
 }
