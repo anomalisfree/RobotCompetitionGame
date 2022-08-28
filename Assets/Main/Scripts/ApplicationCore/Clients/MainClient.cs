@@ -102,7 +102,6 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void VrPlayerControllerReady(Transform playerRoot,
             (Transform leftHandRoot, Transform rightHandRoot) handRoots, Transform bottomRoot)
         {
-            Debug.Log("VR Ready");
             vrPlayerController.Ready -= VrPlayerControllerReady;
             _playerRoot = playerRoot;
             _handRoots = handRoots;
@@ -114,7 +113,6 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void OnFirstSceneLoaded()
         {
             _onFirstSceneLoad -= OnFirstSceneLoaded;
-            //InitializeMultiplayerController();
         }
 
         private void SceneIsLoaded(string room)
@@ -124,14 +122,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
             realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _bottomRoot);
         }
-        
-        private void InitializeMultiplayerController()
-        {
-           
-            realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            realtimeMultiplayerController.Init("TestRoom", _playerRoot, _handRoots, _bottomRoot);
-        }
-        
+
         private void RealtimeMultiplayerControllerReady()
         {
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
