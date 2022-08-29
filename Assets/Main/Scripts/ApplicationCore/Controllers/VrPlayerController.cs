@@ -8,10 +8,10 @@ namespace Main.Scripts.ApplicationCore.Controllers
     public class VrPlayerController : BaseController
     {
         [SerializeField] private VrPlayerView vrPlayerView;
-        [SerializeField] private Material[] mainMaterials;
-
+        
+        public Material[] mainMaterials;
         public Action<Transform, (Transform leftHandRoot, Transform rightHandRoot), Transform> Ready;
-        public PlayerData PlayerData = new PlayerData();
+        public readonly PlayerData PlayerData = new();
 
         private VrPlayerView _vrPlayerView;
 

@@ -31,6 +31,7 @@ Transform:
   m_Children:
   - {fileID: 5233744325941004756}
   - {fileID: 4379283747391418854}
+  - {fileID: 7085547344427230832}
   m_Father: {fileID: 7814528189764188427}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -63,6 +64,7 @@ MonoBehaviour:
   - {fileID: 5703038190291257499}
   - {fileID: 4878368415888920067}
   - {fileID: 8288486898334863032}
+  nameText: {fileID: 7085547344427230832}
 --- !u!1 &59400973963554163
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,24 +131,24 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 3719411206221489132}
   _childViews:
-  - viewID: 1
-    view: {fileID: 2250662613699784293}
-  - viewID: 2
-    view: {fileID: 4838366705998892459}
-  - viewID: 3
-    view: {fileID: 5054390695982806313}
-  - viewID: 4
-    view: {fileID: 6275148229118062174}
-  - viewID: 5
-    view: {fileID: 9030354668399132104}
-  - viewID: 6
-    view: {fileID: 8323916616139419498}
-  - viewID: 7
-    view: {fileID: 2036693320973629525}
-  - viewID: 8
-    view: {fileID: 7783145296016055597}
-  - viewID: 9
-    view: {fileID: 5387356010272552127}
+  - componentID: 1
+    component: {fileID: 2250662613699784293}
+  - componentID: 2
+    component: {fileID: 4838366705998892459}
+  - componentID: 3
+    component: {fileID: 5054390695982806313}
+  - componentID: 4
+    component: {fileID: 6275148229118062174}
+  - componentID: 5
+    component: {fileID: 9030354668399132104}
+  - componentID: 6
+    component: {fileID: 8323916616139419498}
+  - componentID: 7
+    component: {fileID: 2036693320973629525}
+  - componentID: 8
+    component: {fileID: 7783145296016055597}
+  - componentID: 9
+    component: {fileID: 5387356010272552127}
 --- !u!114 &3719411206221489132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -251,8 +253,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 8377588306279326407}
   _childViews:
-  - viewID: 1
-    view: {fileID: 5306171580821036400}
+  - componentID: 1
+    component: {fileID: 5306171580821036400}
 --- !u!114 &8377588306279326407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,8 +359,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2244892501845250739}
   _childViews:
-  - viewID: 1
-    view: {fileID: 577207710698094497}
+  - componentID: 1
+    component: {fileID: 577207710698094497}
 --- !u!114 &2244892501845250739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -494,8 +496,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7618002131060484002}
   _childViews:
-  - viewID: 1
-    view: {fileID: 805450748688067710}
+  - componentID: 1
+    component: {fileID: 805450748688067710}
 --- !u!114 &7618002131060484002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -600,8 +602,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 9060904728330327690}
   _childViews:
-  - viewID: 1
-    view: {fileID: 5403013934850349598}
+  - componentID: 1
+    component: {fileID: 5403013934850349598}
 --- !u!114 &9060904728330327690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -972,8 +974,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2563326603902124890}
   _childViews:
-  - viewID: 1
-    view: {fileID: 5389952346408260055}
+  - componentID: 1
+    component: {fileID: 5389952346408260055}
 --- !u!114 &2563326603902124890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1078,8 +1080,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7402732605087084453}
   _childViews:
-  - viewID: 1
-    view: {fileID: 4729585573513178328}
+  - componentID: 1
+    component: {fileID: 4729585573513178328}
 --- !u!114 &7402732605087084453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1184,8 +1186,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2667423430131091304}
   _childViews:
-  - viewID: 1
-    view: {fileID: 4452260676793640352}
+  - componentID: 1
+    component: {fileID: 4452260676793640352}
 --- !u!114 &2667423430131091304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1263,12 +1265,12 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 825335388446075524}
   _childViews:
-  - viewID: 1
-    view: {fileID: 921650138772657081}
-  - viewID: 2
-    view: {fileID: 1461221065756206075}
-  - viewID: 3
-    view: {fileID: 1857109452935944635}
+  - componentID: 1
+    component: {fileID: 921650138772657081}
+  - componentID: 2
+    component: {fileID: 1461221065756206075}
+  - componentID: 3
+    component: {fileID: 1857109452935944635}
 --- !u!114 &825335388446075524
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1598,8 +1600,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5451256949382155534}
   _childViews:
-  - viewID: 1
-    view: {fileID: 4471812850717119402}
+  - componentID: 1
+    component: {fileID: 4471812850717119402}
 --- !u!114 &5451256949382155534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1735,8 +1737,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 1165120770201693272}
   _childViews:
-  - viewID: 1
-    view: {fileID: 2495722086552746961}
+  - componentID: 1
+    component: {fileID: 2495722086552746961}
 --- !u!114 &1165120770201693272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2456,8 +2458,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 4755686923116907441}
   _childViews:
-  - viewID: 1
-    view: {fileID: 3082329724006325141}
+  - componentID: 1
+    component: {fileID: 3082329724006325141}
 --- !u!114 &4755686923116907441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2562,8 +2564,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7769405108594118822}
   _childViews:
-  - viewID: 1
-    view: {fileID: 6673198045096884825}
+  - componentID: 1
+    component: {fileID: 6673198045096884825}
 --- !u!114 &7769405108594118822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3048,8 +3050,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5537915361638735747}
   _childViews:
-  - viewID: 1
-    view: {fileID: 2717417443655320925}
+  - componentID: 1
+    component: {fileID: 2717417443655320925}
 --- !u!114 &5537915361638735747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3154,8 +3156,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5948528807393478983}
   _childViews:
-  - viewID: 1
-    view: {fileID: 7781391048994286436}
+  - componentID: 1
+    component: {fileID: 7781391048994286436}
 --- !u!114 &5948528807393478983
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3174,6 +3176,178 @@ MonoBehaviour:
   _syncScale: 0
   _syncVelocity: 1
   _maintainOwnershipWhileSleeping: 0
+--- !u!1 &3242088117359145972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7085547344427230832}
+  - component: {fileID: 774866470330534156}
+  - component: {fileID: 5595239913612052844}
+  m_Layer: 0
+  m_Name: Name
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &7085547344427230832
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242088117359145972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -0.01, y: 0.01, z: 0.01}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 933502874}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0.187}
+  m_SizeDelta: {x: 60, y: 5}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!23 &774866470330534156
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242088117359145972}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 7032093815205813286, guid: fc41d5815b9a5bb48be4c84a746c4ff6, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5595239913612052844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3242088117359145972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9541d86e2fd84c1d9990edf0852d74ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Name
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fc41d5815b9a5bb48be4c84a746c4ff6, type: 2}
+  m_sharedMaterial: {fileID: 7032093815205813286, guid: fc41d5815b9a5bb48be4c84a746c4ff6, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 36
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 0
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 774866470330534156}
+  m_maskType: 0
 --- !u!1 &3294927090000149906
 GameObject:
   m_ObjectHideFlags: 0
@@ -3344,8 +3518,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7079805207802221919}
   _childViews:
-  - viewID: 1
-    view: {fileID: 7928339543984755263}
+  - componentID: 1
+    component: {fileID: 7928339543984755263}
 --- !u!114 &7079805207802221919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3450,8 +3624,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2817043344063857460}
   _childViews:
-  - viewID: 1
-    view: {fileID: 1887431168714603483}
+  - componentID: 1
+    component: {fileID: 1887431168714603483}
 --- !u!114 &2817043344063857460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3887,10 +4061,10 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7136983388100264900}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 2250780621574680255}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 2250780621574680255}
 --- !u!114 &7136983388100264900
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4634,8 +4808,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2795157730909314421}
   _childViews:
-  - viewID: 1
-    view: {fileID: 3981198611332156445}
+  - componentID: 1
+    component: {fileID: 3981198611332156445}
 --- !u!114 &2795157730909314421
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4823,8 +4997,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7767277740005267409}
   _childViews:
-  - viewID: 1
-    view: {fileID: 8250236732407317744}
+  - componentID: 1
+    component: {fileID: 8250236732407317744}
 --- !u!114 &7767277740005267409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5027,10 +5201,10 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 918940472741934602}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 2208728852839387805}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 2208728852839387805}
 --- !u!114 &918940472741934602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5135,10 +5309,10 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 9166958738142322413}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 8103332057362318395}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 8103332057362318395}
 --- !u!114 &9166958738142322413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5436,8 +5610,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7632451322957337742}
   _childViews:
-  - viewID: 1
-    view: {fileID: 3742595096671142913}
+  - componentID: 1
+    component: {fileID: 3742595096671142913}
 --- !u!114 &7632451322957337742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5767,10 +5941,10 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5388739858874491700}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 7715405454932623606}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 7715405454932623606}
 --- !u!114 &5388739858874491700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5848,12 +6022,12 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 7326986889572980592}
   _childViews:
-  - viewID: 1
-    view: {fileID: 3629087736312619251}
-  - viewID: 2
-    view: {fileID: 6347944637199989131}
-  - viewID: 3
-    view: {fileID: 7593810546019751633}
+  - componentID: 1
+    component: {fileID: 3629087736312619251}
+  - componentID: 2
+    component: {fileID: 6347944637199989131}
+  - componentID: 3
+    component: {fileID: 7593810546019751633}
 --- !u!114 &7326986889572980592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5958,8 +6132,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 4281236969330205101}
   _childViews:
-  - viewID: 1
-    view: {fileID: 2454737938097322396}
+  - componentID: 1
+    component: {fileID: 2454737938097322396}
 --- !u!114 &4281236969330205101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6064,10 +6238,10 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 937647339954695818}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 5376806408393412003}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 5376806408393412003}
 --- !u!114 &937647339954695818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6458,6 +6632,7 @@ GameObject:
   - component: {fileID: 7923461022058306929}
   - component: {fileID: 7924058911804253249}
   - component: {fileID: 8212864740608442698}
+  - component: {fileID: -68350164954904186}
   m_Layer: 0
   m_Name: VR Player
   m_TagString: Untagged
@@ -6509,19 +6684,21 @@ MonoBehaviour:
     component: {fileID: 7923461022058306929}
   - componentID: 2
     component: {fileID: 7924058911804253249}
+  - componentID: 3
+    component: {fileID: -68350164954904186}
   _childViews:
-  - viewID: 1
-    view: {fileID: 0}
-  - viewID: 2
-    view: {fileID: 0}
-  - viewID: 3
-    view: {fileID: 7923960455991173325}
-  - viewID: 4
-    view: {fileID: 7376755141604702774}
-  - viewID: 5
-    view: {fileID: 139879762678519175}
-  - viewID: 6
-    view: {fileID: 6786620824607484618}
+  - componentID: 1
+    component: {fileID: 0}
+  - componentID: 2
+    component: {fileID: 0}
+  - componentID: 3
+    component: {fileID: 7923960455991173325}
+  - componentID: 4
+    component: {fileID: 7376755141604702774}
+  - componentID: 5
+    component: {fileID: 139879762678519175}
+  - componentID: 6
+    component: {fileID: 6786620824607484618}
 --- !u!114 &7923461022058306929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6576,6 +6753,31 @@ MonoBehaviour:
   leftHandRoot: {fileID: 9016189944431387588}
   rightHandRoot: {fileID: 847789002574170490}
   bottomRoot: {fileID: 3621066083471886247}
+  playerDataSender: {fileID: -68350164954904186}
+  meshRenderersWithMainColor:
+  - {fileID: 20940115307478147}
+  - {fileID: 4258064055803665130}
+  - {fileID: 5559201015367501366}
+  - {fileID: 7033365832698306157}
+  - {fileID: 5335623199042417893}
+  - {fileID: 2373108235943297864}
+  - {fileID: 3569234986621905457}
+  skinnedMeshRenderersWithMainColor:
+  - {fileID: 3399138756171773895}
+  - {fileID: 6480725868258991481}
+  nameText: {fileID: 5595239913612052844}
+--- !u!114 &-68350164954904186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7811223502155504281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ed191776a038dd409650ab7c9e1b04b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7934473439538429078
 GameObject:
   m_ObjectHideFlags: 0
@@ -6662,8 +6864,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 1623371101981521173}
   _childViews:
-  - viewID: 1
-    view: {fileID: 7051887212808596272}
+  - componentID: 1
+    component: {fileID: 7051887212808596272}
 --- !u!114 &1623371101981521173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7098,8 +7300,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 2906145691831269858}
   _childViews:
-  - viewID: 1
-    view: {fileID: 4466211064142145370}
+  - componentID: 1
+    component: {fileID: 4466211064142145370}
 --- !u!114 &2906145691831269858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7288,8 +7490,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5020920269508701015}
   _childViews:
-  - viewID: 1
-    view: {fileID: 2454609922959207747}
+  - componentID: 1
+    component: {fileID: 2454609922959207747}
 --- !u!114 &5020920269508701015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7394,8 +7596,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 4433830385839524448}
   _childViews:
-  - viewID: 1
-    view: {fileID: 6240576368788866900}
+  - componentID: 1
+    component: {fileID: 6240576368788866900}
 --- !u!114 &4433830385839524448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7480,24 +7682,24 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 1705642176906204034}
   _childViews:
-  - viewID: 1
-    view: {fileID: 1758220730346115187}
-  - viewID: 2
-    view: {fileID: 3867883306266917534}
-  - viewID: 3
-    view: {fileID: 3326320016372387101}
-  - viewID: 4
-    view: {fileID: 8760539213008831323}
-  - viewID: 5
-    view: {fileID: 212933710455411112}
-  - viewID: 6
-    view: {fileID: 3598142880201109286}
-  - viewID: 7
-    view: {fileID: 1003657881986170562}
-  - viewID: 8
-    view: {fileID: 3739512493949925916}
-  - viewID: 9
-    view: {fileID: 3159912682395099480}
+  - componentID: 1
+    component: {fileID: 1758220730346115187}
+  - componentID: 2
+    component: {fileID: 3867883306266917534}
+  - componentID: 3
+    component: {fileID: 3326320016372387101}
+  - componentID: 4
+    component: {fileID: 8760539213008831323}
+  - componentID: 5
+    component: {fileID: 212933710455411112}
+  - componentID: 6
+    component: {fileID: 3598142880201109286}
+  - componentID: 7
+    component: {fileID: 1003657881986170562}
+  - componentID: 8
+    component: {fileID: 3739512493949925916}
+  - componentID: 9
+    component: {fileID: 3159912682395099480}
 --- !u!114 &1705642176906204034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7602,8 +7804,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 5432747904550621351}
   _childViews:
-  - viewID: 1
-    view: {fileID: 5300982868681565346}
+  - componentID: 1
+    component: {fileID: 5300982868681565346}
 --- !u!114 &5432747904550621351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7854,8 +8056,8 @@ MonoBehaviour:
   - componentID: 1
     component: {fileID: 152146118179740222}
   _childViews:
-  - viewID: 1
-    view: {fileID: 5324671590039293275}
+  - componentID: 1
+    component: {fileID: 5324671590039293275}
 --- !u!114 &152146118179740222
 MonoBehaviour:
   m_ObjectHideFlags: 0
