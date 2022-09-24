@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 299268526}
   - component: {fileID: 299268525}
   - component: {fileID: 299268529}
+  - component: {fileID: 299268530}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -229,6 +230,7 @@ MonoBehaviour:
   sceneLoaderController: {fileID: 299268526}
   bundleLoaderController: {fileID: 299268525}
   realtimeMultiplayerController: {fileID: 299268529}
+  timelineTimerController: {fileID: 299268530}
 --- !u!114 &299268529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +244,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeMultiplayerView: {fileID: 8773123732425561553, guid: 9962a56a00d162e46bef75ed8eab06f9, type: 3}
+--- !u!114 &299268530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299268523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c8800b2c2684743bcfa0fd7752dd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineView: {fileID: 5505804486819480705, guid: a1b55b5c42de2f14dba9d5e27ecac0da, type: 3}
 --- !u!1 &1389096489
 GameObject:
   m_ObjectHideFlags: 0
