@@ -9,7 +9,7 @@ namespace Main.Scripts.ApplicationCore.Editor
     [CustomEditor(typeof(TimelineDataSender))]
     public class TimelineEditor : UnityEditor.Editor
     {
-        private float _timeToSet = 0f;
+        private float _timeToSet;
         
         public override void OnInspectorGUI() {
             var timelineTimer = (TimelineDataSender)target;
