@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/HallScene.unity
     guid: 1062579390bab4b4eb4363acb8d93757
+  - enabled: 1
+    path: Assets/Main/Scenes/RaceOne.unity
+    guid: f0dc773ffa6e860419f22bc922e2c4b6
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: e0a67ade6bccb854a96136d4106871e1, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: a976a8402ef144148ad16a6bbbc19581, type: 2}
