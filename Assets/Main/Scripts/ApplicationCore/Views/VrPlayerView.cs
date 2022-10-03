@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Autohand;
 using UnityEngine;
 
@@ -9,6 +10,7 @@ namespace Main.Scripts.ApplicationCore.Views
         [SerializeField] private Transform rightHand;
         [SerializeField] private Transform bodyRoot;
         [SerializeField] private AutoHandPlayer autoHandPlayer;
+        [SerializeField] private List<SkinnedMeshRenderer> skinnedMeshRenderersWithMainColor;
 
         private void Awake()
         {
@@ -24,10 +26,23 @@ namespace Main.Scripts.ApplicationCore.Views
         {
             return bodyRoot;
         }
+        
+        public Transform GetBottomRoot()
+        {
+            return autoHandPlayer.transform;
+        }
 
         public void ResetPose()
         {
             autoHandPlayer.SetPosition(Vector3.zero, Quaternion.identity);
+        }
+
+        public void SetMainMaterial(Material material)
+        {
+            foreach (var skinnedMeshRenderer in skinnedMeshRenderersWithMainColor)
+            {
+                skinnedMeshRenderer.material = material;
+            }
         }
     }
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.60318154, g: 0.6031892, b: 0.6031846, a: 1}
+  m_IndirectSpecularColor: {r: 0.60316056, g: 0.60315865, b: 0.6031595, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 299268526}
   - component: {fileID: 299268525}
   - component: {fileID: 299268529}
+  - component: {fileID: 299268530}
   m_Layer: 0
   m_Name: CLIENT
   m_TagString: Untagged
@@ -197,6 +198,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vrPlayerView: {fileID: 1873324249112337505, guid: 108acc6d803608246b818e8817b7c36e, type: 3}
+  mainMaterials:
+  - {fileID: 2100000, guid: 4aced9158b69394449a54c83b78f6f9f, type: 2}
+  - {fileID: 2100000, guid: 867e9488ffa0e664bb9f5b6cf82b41a9, type: 2}
+  - {fileID: 2100000, guid: 478d38723d65ff5428bf2dee2cc9545e, type: 2}
+  - {fileID: 2100000, guid: dab3bebdf12e8c24885520caa39c970a, type: 2}
+  - {fileID: 2100000, guid: 7659a7dd3057697469b82be26f7a356a, type: 2}
+  - {fileID: 2100000, guid: f6a21ffcf5b51f54981d348f02bde979, type: 2}
+  - {fileID: 2100000, guid: a289ce96a09ff284d84f938afb9ddf9e, type: 2}
+  - {fileID: 2100000, guid: c98041ee0d2b6044ead42bcf0bd7a5a4, type: 2}
+  - {fileID: 2100000, guid: 89cd4d873d74b8d43b37b9446f485d47, type: 2}
+  - {fileID: 2100000, guid: 21441032d5ab1d24f826cc9d23dbd75d, type: 2}
+  - {fileID: 2100000, guid: aae2a6f5edcd8e147a1a3a8e636bb427, type: 2}
+  - {fileID: 2100000, guid: 0c2d18709b4a7d4468e5b9176140db7d, type: 2}
 --- !u!114 &299268528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,6 +230,7 @@ MonoBehaviour:
   sceneLoaderController: {fileID: 299268526}
   bundleLoaderController: {fileID: 299268525}
   realtimeMultiplayerController: {fileID: 299268529}
+  timelineTimerController: {fileID: 299268530}
 --- !u!114 &299268529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,6 +244,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   realtimeMultiplayerView: {fileID: 8773123732425561553, guid: 9962a56a00d162e46bef75ed8eab06f9, type: 3}
+--- !u!114 &299268530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299268523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9c8800b2c2684743bcfa0fd7752dd0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timelineView: {fileID: 5505804486819480705, guid: a1b55b5c42de2f14dba9d5e27ecac0da, type: 3}
 --- !u!1 &1389096489
 GameObject:
   m_ObjectHideFlags: 0

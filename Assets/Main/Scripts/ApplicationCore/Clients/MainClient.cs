@@ -18,6 +18,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         [SerializeField] private SceneLoaderController sceneLoaderController;
         [SerializeField] private BundleLoaderController bundleLoaderController;
         [SerializeField] private RealtimeMultiplayerController realtimeMultiplayerController;
+        [SerializeField] private TimelineController timelineTimerController;
 
         //Services
 
@@ -37,6 +38,7 @@ namespace Main.Scripts.ApplicationCore.Clients
             Controllers.Add(sceneLoaderController);
             Controllers.Add(bundleLoaderController);
             Controllers.Add(realtimeMultiplayerController);
+            Controllers.Add(timelineTimerController);
         }
 
         protected override void StartScenario()
@@ -90,6 +92,7 @@ namespace Main.Scripts.ApplicationCore.Clients
         
         private Transform _playerRoot;
         private (Transform leftHandRoot, Transform rightHandRoot) _handRoots;
+        private Transform _bottomRoot;
         private Action _onFirstSceneLoad;
 
         private void InitializeVrPlayerController()
@@ -99,12 +102,12 @@ namespace Main.Scripts.ApplicationCore.Clients
         }
         
         private void VrPlayerControllerReady(Transform playerRoot,
-            (Transform leftHandRoot, Transform rightHandRoot) handRoots)
+            (Transform leftHandRoot, Transform rightHandRoot) handRoots, Transform bottomRoot)
         {
-            Debug.Log("VR Ready");
             vrPlayerController.Ready -= VrPlayerControllerReady;
             _playerRoot = playerRoot;
             _handRoots = handRoots;
+            _bottomRoot = bottomRoot;
             _onFirstSceneLoad += OnFirstSceneLoaded;
             LoadNewScene(scenes[0], _onFirstSceneLoad);
         }
@@ -112,28 +115,27 @@ namespace Main.Scripts.ApplicationCore.Clients
         private void OnFirstSceneLoaded()
         {
             _onFirstSceneLoad -= OnFirstSceneLoaded;
-            InitializeMultiplayerController();
         }
 
         private void SceneIsLoaded(string room)
         {
             if (string.IsNullOrEmpty(room)) return;
 
-            // realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            // realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _loginResponseData);
-        }
-        
-        private void InitializeMultiplayerController()
-        {
-           
             realtimeMultiplayerController.Ready += RealtimeMultiplayerControllerReady;
-            realtimeMultiplayerController.Init("TestRoom", _playerRoot, _handRoots);
+            realtimeMultiplayerController.Init(room, _playerRoot, _handRoots, _bottomRoot);
         }
-        
+
         private void RealtimeMultiplayerControllerReady()
         {
             realtimeMultiplayerController.Ready -= RealtimeMultiplayerControllerReady;
+            InitializeTimelineController();
           
         }
+        
+        private void InitializeTimelineController()
+        {
+            timelineTimerController.Init();
+        }
+
     }
 }
