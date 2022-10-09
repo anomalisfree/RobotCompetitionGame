@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Main.Scripts.Logic.Network;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
@@ -324,7 +325,16 @@ namespace Autohand {
         }
 
         /// <summary>Called by the hand whenever this item is grabbed</summary>
-        internal virtual void OnGrab(Hand hand) {
+        internal virtual void OnGrab(Hand hand)
+        {
+
+            var ownerChanger = GetComponent<OwnerChanger>();
+            if (ownerChanger != null)
+            {
+                ownerChanger.RequestOwnership();
+                ownerChanger.SetIsGrabbed(true);
+            }
+            
             if(lockHandOnGrab)
                 hand.body.isKinematic = true;
 
@@ -379,6 +389,13 @@ namespace Autohand {
 
                 OnReleaseEvent?.Invoke(hand, this);
                 onRelease?.Invoke(hand, this);
+                
+                var ownerChanger = GetComponent<OwnerChanger>();
+                if (ownerChanger != null)
+                {
+                   ownerChanger.SetIsGrabbed(false);
+                   ownerChanger.RequestOwnership();
+                }
 
                 Unhighlight(hand);
             }

@@ -1,5 +1,9 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using Main.Scripts.ApplicationCore.RealtimeModels;
 using Normal.Realtime;
+using Oculus.Voice.Core.Utilities;
 using UnityEngine;
 
 namespace Main.Scripts.Logic.Network
@@ -12,12 +16,19 @@ namespace Main.Scripts.Logic.Network
         public RealtimeView realtimeView;
         public RealtimeTransform realtimeTransform;
 
+        [SerializeField] private List<OwnerChanger> connectedObjects;
 
-        private void Update()
+        private float _timer;
+        
+        private IEnumerator Timer()
         {
-            if (realtimeView.isOwnedLocallySelf)
+            _timer = 0;
+
+            while (true)
             {
-                interactableObjectSender.SetReleaseTimer(interactableObjectSender.GetTimerValue() + Time.deltaTime);
+                interactableObjectSender.AddTimeToTimer(_timer);
+                _timer += 0.02f;
+                yield return new WaitForSeconds(_timer);
             }
         }
 
@@ -32,9 +43,7 @@ namespace Main.Scripts.Logic.Network
                 {
                     if (!interactableObjectSender.GetIsGrabbed())
                     {
-                        realtimeView.RequestOwnership();
-                        realtimeTransform.RequestOwnership();
-                        interactableObjectSender.SetReleaseTimer(0);
+                        RequestOwnership();
                     }
                 }
                 else if (otherInteractableObjectSender != null)
@@ -45,14 +54,32 @@ namespace Main.Scripts.Logic.Network
                         {
                             if (!interactableObjectSender.GetIsGrabbed())
                             {
-                                realtimeView.RequestOwnership();
-                                realtimeTransform.RequestOwnership();
-                                interactableObjectSender.SetReleaseTimer(0);
+                                RequestOwnership();
                             }
                         }
                     }
                 }
             }
+        }
+
+        public void RequestOwnership(bool secondWave = false)
+        {
+            realtimeView.RequestOwnership();
+            realtimeTransform.RequestOwnership();
+            StopAllCoroutines();
+            StartCoroutine(Timer());
+
+            if (secondWave) return;
+            
+            foreach (var connectedObject in connectedObjects)
+            {
+                connectedObject.RequestOwnership(true);
+            }
+        }
+
+        public void SetIsGrabbed(bool isGrabbed)
+        {
+            interactableObjectSender.SetIsGrabbed(isGrabbed);
         }
     }
 }
